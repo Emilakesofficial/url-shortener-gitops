@@ -6,13 +6,13 @@ metadata:
 spec:
   project: default
   sources:
-    - repoURL: https://github.com/emilakes/url-shortener-app.git
+    - repoURL: https://github.com/emilakesofficial/url-shortener-app.git
       targetRevision: main
       path: helm/kutt
       helm:
         valueFiles:
           - $values/kutt/values-prod.yaml
-    - repoURL: https://github.com/emilakes/url-shortener-gitops.git
+    - repoURL: https://github.com/emilakesofficial/url-shortener-gitops.git
       targetRevision: main
       ref: values
   destination:
