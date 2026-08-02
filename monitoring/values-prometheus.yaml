@@ -1,0 +1,47 @@
+alertmanager:
+  enabled: false   # not required by your grading rubric; cuts a full extra pod
+
+prometheus:
+  prometheusSpec:
+    retention: 2d
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: 300m
+        memory: 400Mi
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 2Gi
+
+grafana:
+  resources:
+    requests:
+      cpu: 50m
+      memory: 100Mi
+    limits:
+      cpu: 150m
+      memory: 200Mi
+  persistence:
+    enabled: false   # acceptable: dashboards are default/re-creatable, not hand-tuned data worth persisting for this project
+  adminPassword: "changeme123"   # you'll change this in Step 4
+
+prometheusOperator:
+  resources:
+    requests:
+      cpu: 50m
+      memory: 100Mi
+    limits:
+      cpu: 150m
+      memory: 200Mi
+
+kubeStateMetrics:
+  enabled: true
+
+nodeExporter:
+  enabled: true
