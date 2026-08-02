@@ -1,0 +1,3 @@
+allowed_ssh_cidrs      = ["x.x.x.x/32"]
+primary_public_key     = "ssh-ed25519 AAAA... your-key-comment"
+additional_public_keys = ["ssh-ed25519 AAAA... teammate-key-comment"]
