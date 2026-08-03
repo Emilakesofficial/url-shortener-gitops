@@ -11,6 +11,7 @@ spec:
       path: helm/kutt
       helm:
         valueFiles:
+          - values-prod.yaml
           - $values/kutt/values-prod.yaml
     - repoURL: https://github.com/emilakesofficial/url-shortener-gitops.git
       targetRevision: main
