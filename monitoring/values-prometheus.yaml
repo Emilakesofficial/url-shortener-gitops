@@ -37,7 +37,7 @@ grafana:
         memory: 150Mi
   persistence:
     enabled: false   # acceptable: dashboards are default/re-creatable, not hand-tuned data worth persisting for this project
-  adminPassword: "changeme123"   # you'll change this in Step 4 .....
+  adminPassword: "Admin12345!"   # you'll change this in Step 4 .....
 
 prometheusOperator:
   resources:
