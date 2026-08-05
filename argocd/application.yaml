@@ -25,4 +25,16 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=false
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: kutt
+      jsonPointers:
+        - /spec/replicas
+    - group: apps
+      kind: Deployment
+      name: redis
+      jsonPointers:
+        - /spec/replicas
+
       
